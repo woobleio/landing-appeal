@@ -295,12 +295,15 @@ footer {
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 880px) {
 	header {
 		nav li {
 			font-size: 1.15em;
-			padding: 0 10px;
-			a.signup { padding: 5px 10px; }
+			a.active, a:hover { padding-bottom: 5px; }
+		}
+		a.signup {
+			position: relative;
+			float: right;
 		}
 		.logo { margin-left: 0; }
 	}
@@ -308,7 +311,7 @@ footer {
 @media screen and (max-width: 660px) {
 	header {
 		.logo { display: none; }
-		.signup { display: none; }
+		a.signup { padding: 5px 8px; }
 	}
 	ul { padding-left: 0; }
 }

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Wooble</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Jonathan Serra & Ench" />
+  	<meta name="keywords" content="JS,wooble,template,webcomponents,webdesign,share" />
+		<meta name="description" content="" />
+		<link rel="stylesheet" type="text/css" href="../main.min.css" media="screen">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700,800">
+		<link rel="icon" type="image/png" href="https://d3dppz6vjvbt4r.cloudfront.net/favico.png" />
+		<script src="https://use.fontawesome.com/e817f64af0.js"></script>
+		<meta name="description" content="Share your web design creations, use them for your projects.">
+		<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+		<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+		<meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT">
+	</head>
+	<body>
+		<header id="header">
+			<div class="container">
+				<div class="logo"></div>
+				<nav>
+					<ul id="topNav">
+						<li><a data-name="home" href="#home">Home</a></li>
+						<li><a data-name="howItWorks" href="#howItWorks">How&nbsp;it&nbsp;works</a></li>
+						<li><a data-name="faq" href="#faq">FAQ</a></li>
+						<li><a data-name="getInTouch" href="#getInTouch">Get&nbsp;in&nbsp;touch</a></li>
+					</ul>
+				</nav>
+				<a class="signup" href="https://wooble.io/signup">Sign&nbsp;up</a>
+			</div>
+		</header>
+		<main>
+			<section id="home">
+				<div class="container ontop">
+					<h1>Wooble.</h1>
+					<p class="attract">Share your web design creations, use them for your projects.</p>
+					<p>By the way, Wooble is out!</p>
+					<a href="https://wooble.io/">Let's See Wooble</a>
+				</div>
+				<div class="windowBg" id="windowBg">
+					<div class="shapes" id="shapes"></div>
+				</div>
+			</section>
+			<section id="howItWorks">
+				<div class="container">
+					<div class="section group">
+						<div class="col span_1_of_2">
+							<img src="../images/1.svg" alt="" />
+						</div>
+						<div class="col span_1_of_2">
+							<h2>Creators create</h2>
+							<p>You love to build innovative web designs and you want to be recognized all over the world? Wooble allows you to build what you always dreamt to build and to publish it! People will be happy to use your creations to the point you will be praised as the Web Designer Lord.</p>
+						</div>
+					</div>
+					<div class="section group">
+						<div class="col span_1_of_2">
+							<img src="../images/2.svg" alt="" />
+						</div>
+						<div class="col span_1_of_2">
+							<h2>Users use</h2>
+							<p>You want to improve your website but you don't know how to change your awkward navigation bar? No problem, search for an awesome navbar in Wooble, Package it and tell Wooble to build it, then put it in your website in no time.</p>
+						</div>
+					</div>
+					<div class="section group">
+						<div class="col span_1_of_2">
+							<img src="../images/3.svg" alt="" />
+						</div>
+						<div class="col span_1_of_2">
+							<h2>Wooble wobbles</h2>
+							<p>Wooble maintain everything for everybody by using cutting edge technologies. Most websites are built with heavy libraries which slow down pages loading time, Wooble is the new way to think of libraries and use what you exactly need without unecessary code.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="faq">
+				<div class="container">
+					<h2>What is Wooble?</h2>
+					<p>
+						Wooble is a website in which web designers <strong>build and publish</strong> their creations. Wooble is also an <strong>infrastructure</strong> that allows everybody to easily implement the published creations in websites.
+					</p>
+					<h2>I'm a web designer, why should I create on Wooble?</h2>
+					<p>Users come in Wooble to see what they can use for their website, that means your <strong>everybody will recognized your work</strong>. Wooble is an opportunity to <strong>meet people</strong> who might be interested in <strong>working with you in the future</strong>. People always need a web designer to collaborate with.</p>
+					<h2>I'm not a developper, is Wooble for me?</h2>
+					<p>It is for you! Wooble aims to <strong>help people to build beautiful websites</strong> with very <strong>little development knowledge</strong>. Actually, using Wooble requires to know what a script tag is in HTML. Be sure that Wooble will <strong>support you</strong>, Wooble loves adventurers who are eager to build!</p>
+					<h2>Technically, how Wooble works?</h2>
+					<p>
+						Wooble has a <strong>packages system</strong>, a package is a container in which users can put every published creations they want. Then, Wooble compile every creations inside the package and returns to the user <strong>a URL</strong> that links to the compiled package script. The script is like an interface that allows to <strong>pick one creation</strong> at a time and do everything possible with it.
+					</p>
+				</div>
+			</section>
+			<section id="getInTouch">
+				<div class="container">
+					<h2>Get in touch</h2>
+					<p>
+						For any inquiries or just to say Hi!
+					</p>
+					<form id="contact-form" method="post" name="contact">
+
+
+						<div class="section group">
+							<div class="col span_1_of_2">
+								<input id="fieldName" class="field" name="name" placeholder="Name" type="text">
+							</div>
+							<div class="col span_1_of_2">
+								<input id="fieldAdress" class="field" name="email" placeholder="Email" type="email" required>
+							</div>
+						</div>
+
+
+
+
+
+						<textarea id="fieldText" class="field" name="message" placeholder="Message" required></textarea>
+						<input type="submit" class="bt" value="Send">
+					</form>
+					<div id="contact-message">
+						<p class="success">
+							Your message has been sent! Thank you :)
+						</p>
+						<p class="fail">
+							Woops... Something went wrong, your message couln\'t be delivered
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="shapes">
+			<div class="container socials">
+				<a class="fa fa-facebook fa-2x" target="_blank" href="https://www.facebook.com/woobleio"></a>
+				<a class="fa fa-twitter fa-2x" target="_blank" href="https://www.twitter.com/woobleio"></a>
+			</div>
+		</footer>
+		<script src="../ui.js"></script>
+		<script src="../ajax.js"></script>
+	</body>
+</html>
