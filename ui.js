@@ -77,7 +77,7 @@ function easeInOut(currentTime, start, change, duration) {
 	return -change / 2 * (currentTime * (currentTime - 2) - 1) + start
 }
 
-function getScrollMaxY(){ 
+function getScrollMaxY(){
 	var innerh;
 	if (window.innerHeight){
 		innerh = window.innerHeight;
@@ -85,16 +85,16 @@ function getScrollMaxY(){
 		innerh = document.body.clientHeight;
 	}
 	if (window.innerHeight && window.scrollMaxY){
-		// Firefox 
-		yWithScroll = window.innerHeight + window.scrollMaxY; 
-	} else if (document.body.scrollHeight > document.body.offsetHeight){ 
-		// all but Explorer Mac 
-		yWithScroll = document.body.scrollHeight; 
-	} else { 
-		// works in Explorer 6 Strict, Mozilla (not FF) and Safari 
-		yWithScroll = document.body.offsetHeight; 
-	} 
-	return yWithScroll-innerh; 
+		// Firefox
+		yWithScroll = window.innerHeight + window.scrollMaxY;
+	} else if (document.body.scrollHeight > document.body.offsetHeight){
+		// all but Explorer Mac
+		yWithScroll = document.body.scrollHeight;
+	} else {
+		// works in Explorer 6 Strict, Mozilla (not FF) and Safari
+		yWithScroll = document.body.offsetHeight;
+	}
+	return yWithScroll-innerh;
 }
 
 function myScroll () {
@@ -158,7 +158,7 @@ goTop.className = 'goTop'
 document.body.appendChild(goTop)
 goTop.addEventListener('click', function () {
 	scrollToY(0, 1000)
-	myScroll() 
+	myScroll()
 }, false)
 
 window.addEventListener('scroll', myScroll, false)
