@@ -304,6 +304,7 @@ footer {
 		a.signup {
 			position: relative;
 			float: right;
+			margin-left: 5px;
 		}
 		.logo { margin-left: 0; }
 	}
@@ -323,6 +324,9 @@ footer {
 
 }
 @media screen and (max-width: 330px) {
+	header nav ul {
+		text-align: left;
+	}
 	#home {
 		h1 { font-size: 3.1em; }
 		.attract { font-size: 2em; }
