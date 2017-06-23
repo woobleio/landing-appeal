@@ -132,7 +132,7 @@ function menu () {
 		}, false)
 		section = document.getElementById(a.getAttribute('data-name'))
 		a.href = urlBase
-		elts.push({a: a, y: parseInt(section.getBoundingClientRect().top)})
+		elts.push({a: a, y: parseInt(section.getBoundingClientRect().top) - DOMheader.offsetHeight})
 	}
 	elts.reverse()
 	myScroll()

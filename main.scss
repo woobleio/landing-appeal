@@ -24,17 +24,54 @@ input[type=submit] {
 	outline: none;
 }
 
+body#cgu {
+	p, ul {
+		margin-bottom: 10px;
+	}
+}
+
 a {
 	text-decoration: none;
 	color: #fff;
 }
-li { list-style-type: none; }
+nav ul li { list-style-type: none; }
 
+#mentions {
+	width: 50%;
+	text-align: center;
+	margin: 20px auto;
+	font-size: 0.8em;
+}
+
+a.link {
+	text-decoration: underline;
+	color: $accent;
+	&:hover,
+	&:active {
+		color: $active;
+	}
+}
+
+h1.title {
+	margin-top: 50px;
+	color: $accent;
+	text-align: center;
+}
+hr {
+	border: 0;
+  border-bottom: 1px solid #DCDCDC;
+  clear: both;
+  display: block;
+  height: 0;
+  margin: 0 auto 50px auto;
+  padding-top: 50px;
+  width: 100%;
+}
 h2 {
-	font-size: 2.2em;
 	margin: 30px  0;
 	line-height: 1.1em;
 	margin-bottom: 5px;
+	color: $accent;
 }
 .container {
 	width: 100%;
@@ -227,7 +264,7 @@ p {
 footer {
 	padding: 10px 0;
 	color: $accentDark;
-	max-height: 100px;
+	height: auto !important;
 	.socials {
 		margin-top: 20px;
 		text-align: center;
