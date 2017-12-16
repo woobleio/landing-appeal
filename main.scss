@@ -11,6 +11,19 @@ $accentDark: darken($accent, 10%);
 	100%   { background: rgba($accent,0); }
 }
 
+.video-wrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+}
+.video-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -110,6 +123,10 @@ header {
 	line-height: 40px;
 	position: fixed;
 	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 70px;
 	nav li {
 		font-size: 1.2em;
 		padding: 0 20px;
@@ -131,9 +148,9 @@ header {
 		right: 25px;
 		top: 5px;
 		border: 3px solid #fff;
-		padding: 5px 20px;
-		/*animation: signupBorder 5s infinite;*/
-		/*animation-timing-function: ease;*/
+		padding: 0 20px;
+		animation: signupBorder 5s infinite;
+		animation-timing-function: ease;
 		&:hover {
 			border-color: $active;
 			color: $active;
@@ -227,6 +244,10 @@ p {
 	outline: none;
 	&:hover { box-shadow: 0 0 5px $accentDark; }
 	&:focus { box-shadow: 0 0 5px $accentDark; }
+}
+
+main {
+	margin-top: 70px;
 }
 
 #getInTouch {
@@ -335,6 +356,20 @@ footer {
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
+@media screen and (max-width: 640px) and (orientation:landscape) {
+	header {
+		display: none;
+	}
+	main {
+		margin-top: 0;
+	}
+	#home {
+		height: 750px !important;
+		.ontop {
+			margin-top: 0 !important;
+		}
+	}
+}
 @media screen and (max-width: 880px) {
 	header {
 		nav li {
@@ -349,10 +384,14 @@ footer {
 		.logo { margin-left: 0; }
 	}
 }
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 660px) and (orientation:portrait) {
 	header {
+		height: 100px;
 		.logo { display: none; }
 		a.signup { padding: 5px 8px; }
+	}
+	main {
+		margin-top: 100px;
 	}
 	ul { padding-left: 0; }
 }
@@ -363,12 +402,23 @@ footer {
 	}
 
 }
-@media screen and (max-width: 330px) {
-	header nav ul {
-		text-align: left;
+@media screen and (max-width: 440px) {
+	header {
+		height: 140px;
+	}
+	main {
+		margin-top: 140px;
 	}
 	#home {
-		h1 { font-size: 3.1em; }
-		.attract { font-size: 2em; }
+		.ontop {
+			top: 0;
+		}
+		h1 { font-size: 3em; }
+		.attract { font-size: 1.4em; }
+	}
+}
+@media screen and (max-width: 360px) {
+	header nav ul {
+		text-align: left;
 	}
 }
