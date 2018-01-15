@@ -19,14 +19,19 @@
 		<meta name="twitter:image" content="https://d3dppz6vjvbt4r.cloudfront.net/landing_logo_back.png">
 		<link rel="stylesheet" type="text/css" href="main.min.css" media="screen">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700,800">
-		<link rel="icon" type="image/png" href="https://d3dppz6vjvbt4r.cloudfront.net/favico.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+		<link rel="manifest" href="images/manifest.json">
+		<link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="theme-color" content="#ffffff">
 		<script src="https://use.fontawesome.com/e817f64af0.js"></script>
 		<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
 		<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
 		<meta http-equiv="expires" content="FRI, 13 APR 1999 01:00:00 GMT">
 	</head>
 	<body>
-		<header id="header">
+		<header id="header" class="mobile-hidden">
 			<div class="container">
 				<div class="logo"></div>
 				<a class="signup" href="https://wooble.io/signup">S'inscrire</a>
@@ -35,6 +40,7 @@
 						<li><a data-name="home" href="#home">Accueil</a></li>
 						<li><a data-name="howItWorks" href="#howItWorks">Comment&nbsp;ça&nbsp;marche</a></li>
 						<li><a data-name="faq" href="#faq">FAQ</a></li>
+						<li><a data-name="roadmap" href="#roadmap">Feuille de route</a></li>
 						<li><a data-name="getInTouch" href="#getInTouch">Contact</a></li>
 					</ul>
 				</nav>
@@ -44,7 +50,7 @@
 			<section id="home">
 				<div class="container ontop">
 					<h1>Wooble.</h1>
-          <p class="attract">Créé et trouve les créations webdesign qui rendront ton site merveilleux.</p>
+          <p class="attract">Crée et trouve les créations webdesign qui rendront ton site merveilleux.</p>
 					<p>Wooble est en ligne&nbsp;!</p>
 					<a href="https://wooble.io/">Voir Wooble</a>
 					<div class="video-wrapper">
@@ -78,7 +84,7 @@
 						</div>
 						<div class="col span_1_of_2">
 							<h2>Les utilisateurs utilisent</h2>
-              <p>Tu souhaites améliorer l'apparence de ton site mais tu ne sais pas comment changer cette mauvaise barre de navigation. Avec Wooble c'est simple, cherche sur la plateforme une barre de navigation qui te convient et intègre la dans ton site&nbsp;! Facile avec Wooble</p>
+              <p>Tu souhaites améliorer l'apparence de ton site mais tu ne sais pas comment changer cette mauvaise barre de navigation. Avec Wooble c'est simple, cherche sur la plateforme une barre de navigation qui te convient, personnalise la et intègre la dans ton site&nbsp;! Facile avec Wooble</p>
 						</div>
 					</div>
 					<div class="section group">
@@ -97,9 +103,16 @@
 					<h2>Qu'est ce que Wooble m'apporte&nbsp;?</h2>
           <p>Wooble t'apporte une aide innovante pour rendre ton <strong>site remarquable</strong> ! C'est une plateforme qui invite les créateurs du monde entier à produire des éléments originaux que tu peux <strong>intégrer sur ton site</strong> à ta guise et sans encombre, le tout sans avoir les compétences requises en webdesign ou développement web.</p>
           <h2>Je suis web designer, pourquoi je publierais sur Wooble&nbsp;?</h2>
-          <p>Des créateurs de site web, pro ou amateurs, viennent sur Wooble pour trouver des solutions qui correpondent à leurs besoins, cela veut dire que <strong>tout le monde reconnaîtra tes conceptions</strong>. Wooble est une opportunité pour <strong>rencontrer des personnes</strong> qui seraient intéressées par ton originalité et <strong>voudraient collaborer</strong> avec toi dans le futur.</p>
+          <p>Des créateurs de site web, pro ou amateurs, viennent sur Wooble pour trouver des solutions qui correspondent à leurs besoins, cela veut dire que <strong>tout le monde reconnaîtra tes conceptions</strong>. Wooble est une opportunité pour <strong>rencontrer des personnes</strong> qui seraient intéressées par ton originalité et <strong>voudraient collaborer</strong> avec toi dans le futur.</p>
           <h2>Je ne sais pas développer, est-ce que Wooble est pour moi&nbsp;?</h2>
           <p>Wooble est pour toi&nbsp;! Sa mission est de permettre à <strong>quiconque</strong> qui n'aurait pas les connaissances en création de site web <strong>d'améliorer l'apparence</strong>.</p>
+				</div>
+			</section>
+			<section id="roadmap">
+				<div class="container">
+					<h2>Feuille de route</h2>
+					<div class="timeline"></div>
+					<small>Cette feuille de route est une <a href="https://wooble.io/creations/xB8L15jw" target="_blank">création sur Wooble !</a></small>
 				</div>
 			</section>
 			<section id="getInTouch">
@@ -109,8 +122,6 @@
 						Pour poser des questions ou juste saluer&nbsp;!
 					</p>
 					<form id="contact-form" method="post" name="contact">
-
-
 						<div class="section group">
 							<div class="col span_1_of_2">
 								<input id="fieldName" class="field" name="name" placeholder="Nom" type="text">
@@ -119,11 +130,6 @@
 								<input id="fieldAdress" class="field" name="email" placeholder="Adresse Email" type="email" required>
 							</div>
 						</div>
-
-
-
-
-
 						<textarea id="fieldText" class="field" name="message" placeholder="Message" required></textarea>
 						<input type="submit" class="bt" value="Envoyer">
 					</form>
@@ -158,6 +164,31 @@
 
 		  ga('create', 'UA-80538061-1', 'auto');
 		  ga('send', 'pageview');
+		</script>
+		<script src="https://d2ncq0durb0run.cloudfront.net/472b07b9fcf2c2451e8781e944bf5f77cd8457c8-8/wooble.js"></script>
+		<script>
+			var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+			var roadmap = {
+				'items': [
+					{
+						'title': 'Personnalisation des créations',
+						'description': 'Toutes les créations personnalisables en quelques cliques'
+					},
+					{
+						'title': 'Intéraction entre utilisateurs et créateurs',
+						'description': 'Fludification des échanges entre les utilisateurs qui expriment leurs besoins et les créateurs qui proposent des solutions'
+					},
+					{
+						'title': 'Utilisation universelle de Wooble',
+						'description': 'Intégration des créations de Wooble facilitée pour n\'importe quel siteweb'
+					},
+					{
+						'title': 'La meilleure plateforme pour ton site est là',
+						'description': 'À ce moment Wooble est la solution qu\'il te faut pour transcender ton siteweb'
+					}
+				]
+			};
+			Wb('timeline').init('.timeline', roadmap);
 		</script>
 	</body>
 </html>

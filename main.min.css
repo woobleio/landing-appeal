@@ -29,6 +29,9 @@ body {
   overflow-x: hidden;
   /*weight available: 400, 700, 800*/ }
 
+html {
+  overflow-x: hidden; }
+
 input[type=submit] {
   outline: none; }
   input[type=submit]:active, input[type=submit]:focus {
@@ -120,7 +123,7 @@ header {
   right: 0;
   height: 70px; }
   header nav li {
-    font-size: 1.2em;
+    font-size: 1em;
     padding: 0 20px;
     display: inline; }
     header nav li a:hover {
@@ -146,13 +149,31 @@ header {
       color: #fdcfe7; }
   header .logo {
     background: url("images/logo.png") no-repeat;
-    width: 69px;
+    background-size: cover;
+    width: 55px;
     height: 55px;
     left: 25px;
     position: absolute;
     margin-top: -7px; }
   header .container {
     padding: 0 10px; }
+
+.unfold {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: calc(50% - 25px);
+  background-color: red;
+  border-radius: 0 0 50% 50%;
+  width: 25px;
+  height: 18px;
+  padding: 5px; }
+  .unfold .menu-icon {
+    background: url("images/menu.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%; }
 
 #home {
   padding: 1px 0 50px 0;
@@ -227,6 +248,21 @@ p {
 
 main {
   margin-top: 70px; }
+
+#roadmap {
+  padding: 50px 0;
+  background-color: white; }
+  #roadmap h2 {
+    font-size: 2.8em; }
+  #roadmap small {
+    display: block;
+    margin-top: 30px; }
+    #roadmap small a {
+      color: #ed95c2;
+      text-decoration: underline; }
+  #roadmap .timeline {
+    display: inline-block;
+    text-align: left; }
 
 #getInTouch {
   padding: 50px 0;
@@ -365,10 +401,10 @@ footer {
     margin: 0; } }
 @media screen and (max-width: 440px) {
   header {
-    height: 140px; }
+    display: none; }
 
   main {
-    margin-top: 140px; }
+    margin-top: 0; }
 
   #home .ontop {
     top: 0; }
@@ -376,8 +412,5 @@ footer {
     font-size: 3em; }
   #home .attract {
     font-size: 1.4em; } }
-@media screen and (max-width: 360px) {
-  header nav ul {
-    text-align: left; } }
 
 /*# sourceMappingURL=main.min.css.map */

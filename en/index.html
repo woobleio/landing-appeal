@@ -18,7 +18,12 @@
 		<meta name="twitter:image" content="https://d3dppz6vjvbt4r.cloudfront.net/landing_logo_back.png">
 		<link rel="stylesheet" type="text/css" href="../main.min.css" media="screen">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700,800">
-		<link rel="icon" type="image/png" href="https://d3dppz6vjvbt4r.cloudfront.net/favico.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+		<link rel="manifest" href="../images/manifest.json">
+		<link rel="mask-icon" href="../images/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="theme-color" content="#ffffff">
 		<script src="https://use.fontawesome.com/e817f64af0.js"></script>
 		<meta name="description" content="Create and find web design creations that will make your website fabulous!">
 		<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
@@ -35,6 +40,7 @@
 						<li><a data-name="home" href="#home">Home</a></li>
 						<li><a data-name="howItWorks" href="#howItWorks">How&nbsp;it&nbsp;works</a></li>
 						<li><a data-name="faq" href="#faq">FAQ</a></li>
+						<li><a data-name="roadmap" href="#roadmap">Roadmap</a></li>
 						<li><a data-name="getInTouch" href="#getInTouch">Get&nbsp;in&nbsp;touch</a></li>
 					</ul>
 				</nav>
@@ -104,6 +110,13 @@
 					<p>It is for you! Wooble aims to <strong>help people to build beautiful websites</strong> with very <strong>little development knowledge</strong>. Actually, using Wooble requires to know what a script tag is in HTML. Be sure that Wooble will <strong>support you</strong>, Wooble loves adventurers who are eager to build!</p>
 				</div>
 			</section>
+			<section id="roadmap">
+				<div class="container">
+					<h2>Roadmap</h2>
+					<div class="timeline"></div>
+					<small>Oh... This timeline is a <a href="https://wooble.io/creations/xB8L15jw" target="_blank">Wooble creation!</a></small>
+				</div>
+			</section>
 			<section id="getInTouch">
 				<div class="container">
 					<h2>Get in touch</h2>
@@ -111,8 +124,6 @@
 						For any inquiries or just to say Hi!
 					</p>
 					<form id="contact-form" method="post" name="contact">
-
-
 						<div class="section group">
 							<div class="col span_1_of_2">
 								<input id="fieldName" class="field" name="name" placeholder="Name" type="text">
@@ -121,11 +132,6 @@
 								<input id="fieldAdress" class="field" name="email" placeholder="Email" type="email" required>
 							</div>
 						</div>
-
-
-
-
-
 						<textarea id="fieldText" class="field" name="message" placeholder="Message" required></textarea>
 						<input type="submit" class="bt" value="Send">
 					</form>
@@ -160,6 +166,31 @@
 
 		  ga('create', 'UA-80538061-1', 'auto');
 		  ga('send', 'pageview');
+		</script>
+		<script src="https://d2ncq0durb0run.cloudfront.net/472b07b9fcf2c2451e8781e944bf5f77cd8457c8-8/wooble.js"></script>
+		<script>
+			var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+			var roadmap = {
+				'items': [
+					{
+						'title': 'Creations customization',
+						'description': 'Every creations easily customizable'
+					},
+					{
+						'title': 'Users and creators interaction',
+						'description': 'Make Wooble the best place for interacting with creators who offer solutions and users who need it'
+					},
+					{
+						'title': 'Wooble everywhere',
+						'description': 'Easy use of Wooble creations for any kind of website'
+					},
+					{
+						'title': 'The best solution for your website',
+						'description': 'At this time Wooble is the best solution to make you website astonishing'
+					}
+				]
+			};
+			Wb('timeline').init('.timeline', roadmap);
 		</script>
 	</body>
 </html>

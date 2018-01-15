@@ -29,6 +29,9 @@ $accentDark: darken($accent, 10%);
 	margin: 0;
 }
 body { font-family: 'Raleway', sans-serif; overflow-x: hidden; /*weight available: 400, 700, 800*/ }
+html {
+	overflow-x: hidden;
+}
 input[type=submit] {
 	&:active,
 	&:focus {
@@ -128,7 +131,7 @@ header {
 	right: 0;
 	height: 70px;
 	nav li {
-		font-size: 1.2em;
+		font-size: 1em;
 		padding: 0 20px;
 		display: inline;
 		a:hover {
@@ -158,13 +161,32 @@ header {
 	}
 	.logo {
 		background: url('images/logo.png') no-repeat;
-		width: 69px;
+		background-size: cover;
+		width: 55px;
 		height: 55px;
 		left: 25px;
 		position: absolute;
 		margin-top: -7px;
 	}
 	.container { padding: 0 10px; }
+}
+.unfold {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: calc(50% - 25px);
+	background-color: red;
+	border-radius: 0 0 50% 50%;
+	width: 25px;
+	height: 18px;
+	padding: 5px;
+	.menu-icon {
+		background: url('images/menu.png') no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 100%;
+		height: 100%;
+	}
 }
 #home {
 	padding: 1px 0 50px 0;
@@ -248,6 +270,26 @@ p {
 
 main {
 	margin-top: 70px;
+}
+
+#roadmap {
+	padding: 50px 0;
+	background-color: white;
+	h2 {
+		font-size: 2.8em;
+	}
+	small {
+		display: block;
+		margin-top: 30px;
+		a {
+			color: $mainColor;
+			text-decoration: underline;
+		}
+	}
+	.timeline {
+		display: inline-block;
+		text-align: left;
+	}
 }
 
 #getInTouch {
@@ -404,10 +446,10 @@ footer {
 }
 @media screen and (max-width: 440px) {
 	header {
-		height: 140px;
+		display: none;
 	}
 	main {
-		margin-top: 140px;
+		margin-top: 0;
 	}
 	#home {
 		.ontop {
@@ -418,7 +460,5 @@ footer {
 	}
 }
 @media screen and (max-width: 360px) {
-	header nav ul {
-		text-align: left;
-	}
+
 }

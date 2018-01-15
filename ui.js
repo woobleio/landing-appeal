@@ -15,6 +15,10 @@ window.requestAnimFrame = (function() {
 	}
 )()
 
+function toggleNav() {
+	
+}
+
 function scrollToY(scrollTargetY, speed, easing) {
 	// scrollTargetY: the target scrollY property of the window
 	// speed: time in pixels per second
