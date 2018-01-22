@@ -215,6 +215,7 @@ header {
 		border-radius: 8px;
 		margin: 30px 0;
 		display: inline-block;
+		transition-duration: .4s;
 		&:hover {
 			color: $mainColor;
 			background: #fff;
