@@ -10,7 +10,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   }
   if (req != undefined) {
     try {
-      req.open("POST", "./contact.php", true);
+      req.open("POST", "/contact.php", true);
     } catch(err) {
       document.getElementsByClassName('fail')[0].style.visibility = 'visible';
     }
