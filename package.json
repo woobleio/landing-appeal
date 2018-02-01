@@ -1,0 +1,37 @@
+{
+  "name": "landing-appeal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "webpack && npm run start:dev",
+    "start:dev": "webpack-dev-server --port 9000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woobleio/landing-appeal.git"
+  },
+  "author": "Slals",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/woobleio/landing-appeal/issues"
+  },
+  "homepage": "https://github.com/woobleio/landing-appeal#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "sass-loader": "^6.0.6",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
+  }
+}
