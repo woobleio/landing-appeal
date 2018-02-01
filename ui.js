@@ -13,11 +13,9 @@ window.requestAnimFrame = (function() {
 			window.setTimeout(callback, 1000 / 60)
 		}
 	}
-)()
+)();
 
-function toggleNav() {
-	
-}
+let transBox = ['.work-one', '.work-two', '.work-three'];
 
 function scrollToY(scrollTargetY, speed, easing) {
 	// scrollTargetY: the target scrollY property of the window
@@ -113,11 +111,56 @@ function myScroll () {
 	if (window.pageYOffset === getScrollMaxY()) {
 		elts[0].a.classList.add('active')
 	}
+
+	parallaxImg();
+	showTransition();
+}
+
+function showTransition() {
+	for (let t of transBox) {
+		let elt = document.querySelector(t);
+
+		var eltY = elt.offsetTop;
+		var winY = document.documentElement.scrollTop;
+		var winH = window.innerHeight;
+		var winBottom = winY + winH;
+
+		if (winBottom < eltY || winY > eltY) {
+			elt.classList.remove('trans-hidden');
+		}
+	}
+}
+
+function parallaxImg() {
+	let img = document.querySelector('.img-parallax');
+	let parent = document.querySelector('#howItWorks');
+
+	var imgY = parent.offsetTop;
+	var winY = document.documentElement.scrollTop;
+	var winH = window.innerHeight;
+	var parentH = parent.clientHeight;
+
+	var speed = 1;
+
+	// The next pixel to show on screen
+	var winBottom = winY + winH;
+
+	// If block is shown on screen
+	if (winBottom > imgY && winY < imgY + parentH) {
+		// Number of pixels shown after block appear
+		var imgBottom = ((winBottom - imgY) * speed);
+		// Max number of pixels until block disappear
+		var imgTop = winH + parentH;
+		// Porcentage between start showing until disappearing
+		var imgPercent = ((imgBottom / imgTop) * 100) + (50 - (speed * 50));
+	}
+	img.style.top = imgPercent + '%';
+	img.style.transform = 'translate(-50%, -' + imgPercent + '%)';
 }
 
 function drawHome () {
-	DOMhome.style.height = DOMwindowBg.style.height = `${window.innerHeight}px`
-	DOMhome.children[0].style.marginTop = ((window.innerHeight - DOMheader.offsetHeight)/2) - (DOMhome.children[0].offsetHeight/2) + DOMheader.offsetHeight + 'px'
+	// DOMhome.style.height = `${window.innerHeight} px`
+	// DOMhome.children[0].style.marginTop = ((window.innerHeight - DOMheader.offsetHeight)/5) - (DOMhome.children[0].offsetHeight/5) + DOMheader.offsetHeight + 'px'
 	DOMhome.children[0].style.left = window.innerWidth/2 - (DOMhome.children[0].offsetWidth/2) - 7.5 + 'px'
 }
 
@@ -146,7 +189,6 @@ const
 	// pour #home
 	DOMheader = document.getElementById('header'),
 	DOMhome = document.getElementById('home'),
-	DOMwindowBg = document.getElementById('windowBg'),
 	DOMshapes = document.getElementById('shapes'),
 	// pour nav
 	topNav = document.getElementById('topNav'),

@@ -4,31 +4,72 @@ $accent: #940650;
 $succes: complement($mainColor);
 $accentDark: darken($accent, 10%);
 
+$blueDark: #21284B;
+$blue: #4A74B8;
+$blueLight: #7BAEDC;
+
+$green: #6FD0C9;
+$greenLight: #B2EEE9;
+
+$yellow: #EDB72D;
+$yellowLight: lighten(#EDB72D, 30%);
+
 @-webkit-keyframes signupBorder {
-	0%     { background: rgba($accent, 0); }
-	24%    { background: rgba($accent, 0); }
-	25%    { background: rgba($accent,.3); }
-	100%   { background: rgba($accent,0); }
+	0%     { background: rgba($active, 0); }
+	24%    { background: rgba($active, 0); }
+	25%    { background: rgba($active,.3); }
+	100%   { background: rgba($active,0); }
 }
 
-.video-wrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	height: 0;
+.img-parallax {
+  width: 100vmax;
+  z-index: -1;
+  position: absolute;
+  top: -50%;
+  left: 40%;
+  transform: translate(-120%,0);
+  pointer-events: none
 }
-.video-wrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 7px;
+  border-radius: 5px;
+  background: $mainColor;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: $accent;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: $accent;
+  cursor: pointer;
 }
 
 * {
 	box-sizing: border-box;
 	margin: 0;
 }
-body { font-family: 'Raleway', sans-serif; overflow-x: hidden; /*weight available: 400, 700, 800*/ }
+body {
+	font-family: 'Raleway', sans-serif;
+	overflow-x: hidden;
+	/*weight available: 400, 700, 800*/
+}
 html {
 	overflow-x: hidden;
 }
@@ -40,12 +81,53 @@ input[type=submit] {
 	outline: none;
 }
 
+.hidden {
+	display: none;
+}
+input[type=text], input[type=number] {
+	height: 33px;
+	width: 100%;
+}
+.param-name {
+	line-height: 33px;
+	font-size: 0.9em;
+	color: $accent;
+}
+
+.creation {
+	margin-top: 60px !important;
+}
+#crea-params {
+	margin: 33px auto;
+	max-width: 400px;
+	text-align: left;
+	.group {
+		margin-bottom: 10px;
+	}
+}
+
+
 body#cgu, body#about {
 	p, ul {
 		margin-bottom: 30px;
 	}
 	p, ul li {
 		line-height: 25px;
+	}
+}
+
+.arrow {
+	color: $mainColor;
+	cursor: pointer;
+	i  {
+		transform: translateX(0) scale(1);
+		transition: all 0.28s ease-out;
+	}
+	&.prev:hover i {
+		transform: translateX(-33px) scale(1.2);
+	}
+	&.next:hover i {
+		transform: translateX(33px) scale(1.2);
 	}
 }
 
@@ -98,10 +180,6 @@ h2 {
 	margin: 0 auto;
 	padding: 0 25px;
 }
-.ontop {
-	position: absolute;
-	z-index: 9;
-}
 .goTop {
 	background: url('images/top.svg') no-repeat;
 	width: 30px;
@@ -119,8 +197,8 @@ h2 {
 .goTop:hover { opacity: 1; }
 header {
 	z-index: 10;
-	background: $mainColor;
-	box-shadow: 0 0 5px $accent;
+	background: black;
+	box-shadow: 0 0 2px #333;
 	padding: 12px 0;
 	text-align: center;
 	line-height: 40px;
@@ -170,36 +248,19 @@ header {
 	}
 	.container { padding: 0 10px; }
 }
-.unfold {
-	display: none;
-	position: fixed;
-	top: 0;
-	left: calc(50% - 25px);
-	background-color: red;
-	border-radius: 0 0 50% 50%;
-	width: 25px;
-	height: 18px;
-	padding: 5px;
-	.menu-icon {
-		background: url('images/menu.png') no-repeat;
-		background-size: contain;
-		background-position: center;
-		width: 100%;
-		height: 100%;
-	}
-}
 #home {
+	background-color: white;
+	min-height: 100vh;
 	padding: 1px 0 50px 0;
-	background: $mainColor url('images/bg-how-it-works.png') repeat fixed;
-	color: #fff;
 	text-align: center;
+	img {
+		display: inline-block;
+		width: 40%;
+		height: auto;
+	}
 	h1 {
 		font-size: 4em;
 		font-weight: 800;
-	}
-	.attract {
-		font-size: 2.5em;
-		font-weight: 700;
 	}
 	p {
 		font-size: 1.2em;
@@ -225,25 +286,83 @@ header {
 	}
 }
 
-.windowBg {
-	position: absolute;
-	top: 0;
-	width: 100%;
-	overflow: hidden;
+.trans {
+	transform: translate(0, 0);
+	opacity: 1;
+	transition: all 0.5s ease-out;
+	transition-delay: 0.33s;
 }
-
-.shapes {
-	background: url('images/shapes.svg') center no-repeat fixed;
-	position: relative;
-	width: 100%;
-	height: 1920px;
+.trans-hidden {
+	transform: translateX(-100px);
+	opacity: 0;
 }
 
 #howItWorks {
+	position: relative;
 	padding: 75px 0;
-	color: $accent;
 	line-height: 1.8em;
-	.section { margin-bottom: 30px; }
+	.bg-color {
+		position: absolute;
+		top: 0; right: 0; bottom: 0; left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $blueDark;
+		z-index: -2;
+	}
+	.section {
+		margin-bottom: 30px;
+		> div {
+			z-index: 2;
+		}
+	}
+	.work-one {
+		h2 {
+			color: $blue;
+		}
+		p {
+			color: $blueLight;
+		}
+	}
+	.work-two {
+		h2 {
+			color: $green;
+		}
+		p {
+			color: $greenLight;
+		}
+	}
+	.work-three {
+		h2 {
+			color: $yellow;
+		}
+		p {
+			color: $yellowLight;
+		}
+	}
+}
+
+#crea {
+	transform: translate(0, 0);
+	transform: scale(1);
+	transform-origin: center;
+	transition: all 0.39s ease-out;
+	opacity: 1;
+	text-align: center;
+	> div {
+		display: inline-block;
+	}
+	&.move-left {
+		opacity: 0;
+		transform: translateX(-122px);
+	}
+	&.move-right {
+		opacity: 0;
+		transform: translateX(122px);
+	}
+	&.pop {
+		opacity: 0;
+		transform: scale(0.3);
+	}
 }
 
 p {
@@ -271,6 +390,7 @@ p {
 
 main {
 	margin-top: 70px;
+	overflow-x: hidden;
 }
 
 #roadmap {
@@ -290,6 +410,9 @@ main {
 	.timeline {
 		display: inline-block;
 		text-align: left;
+		h2 {
+			font-size: 1.1em;
+		}
 	}
 }
 
@@ -397,6 +520,16 @@ footer {
 	width: 49.2%;
 }
 
+.span_1_of_4 {
+	width: 24%;
+}
+.span_2_of_4 {
+	width: 48.8%;
+}
+.span_3_of_4 {
+	width: 74%;
+}
+
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
 @media screen and (max-width: 640px) and (orientation:landscape) {
@@ -416,7 +549,8 @@ footer {
 @media screen and (max-width: 880px) {
 	header {
 		nav li {
-			font-size: 1.15em;
+			font-size: 1em;
+			padding: 0 2px;
 			a.active, a:hover { padding-bottom: 5px; }
 		}
 		a.signup {
@@ -453,11 +587,7 @@ footer {
 		margin-top: 0;
 	}
 	#home {
-		.ontop {
-			top: 0;
-		}
 		h1 { font-size: 3em; }
-		.attract { font-size: 1.4em; }
 	}
 }
 @media screen and (max-width: 360px) {

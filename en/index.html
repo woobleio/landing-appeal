@@ -34,7 +34,7 @@
 		<header id="header">
 			<div class="container">
 				<div class="logo"></div>
-				<a class="signup" href="https://wooble.io/signup">Sign&nbsp;up</a>
+				<a class="signup" href="https://www.wooble.io/signup">Sign&nbsp;up</a>
 				<nav>
 					<ul id="topNav">
 						<li><a data-name="home" href="#home">Home</a></li>
@@ -49,47 +49,48 @@
 		<main>
 			<section id="home">
 				<div class="container ontop">
-					<h1>Wooble.</h1>
-					<p class="attract">Create and find web design creations that will make your website fabulous!</p>
-					<p>By the way, Wooble is out!</p>
-					<a href="https://wooble.io/">Let's See Wooble</a>
-					<div class="video-wrapper">
-						<iframe frameborder="0"
-							allowfullscreen="1"
-							gesture="media"
-							allow="encrypted-media"
-							title="YouTube video player"
-							width="560" height="349"
-							src="https://www.youtube.com/embed/w0k87Ct9W6I"></iframe>
+					<img src="https://d3dppz6vjvbt4r.cloudfront.net/landing_logo_back.png" alt="Wooble ce dont ton site web a besoin" />
+					<div class="creation section group">
+						<div class="col span_1_of_4 arrow prev" onclick="prevShow()">
+							<i class="fa fa-angle-left fa-4x"></i>
+						</div>
+						<div id="crea" class="col span_2_of_4 pop">
+							<div></div>
+						</div>
+						<div class="col span_1_of_4 arrow next" onclick="nextShow()">
+							<i class="fa fa-angle-right fa-4x"></i>
+						</div>
 					</div>
-				</div>
-				<div class="windowBg" id="windowBg">
-					<div class="shapes" id="shapes"></div>
+					<div id="crea-params">
+					</div>
+					<a href="" target="_blank" id="crea-link">See the creation in Wooble</a>
 				</div>
 			</section>
-			<section id="howItWorks">
+			<section id="howItWorks" class="parallax">
+				<img src="https://d3dppz6vjvbt4r.cloudfront.net/big_logo.png" class="img-parallax">
+				<div class="bg-color"></div>
 				<div class="container">
-					<div class="section group">
+					<div class="section group work-one trans trans-hidden">
 						<div class="col span_1_of_2">
-							<img src="../images/1.svg" alt="" />
+							<img src="https://d3dppz6vjvbt4r.cloudfront.net/1.svg" alt="Les créateurs créent" />
 						</div>
 						<div class="col span_1_of_2">
 							<h2>Creators create</h2>
 							<p>You love to build innovative web designs and you want to be recognized all over the world? Wooble allows you to build what you always dreamt to build and to publish it! People will be happy to use your creations to the point you will be praised as the Web Designer Lord.</p>
 						</div>
 					</div>
-					<div class="section group">
+					<div class="section group work-two trans trans-hidden">
 						<div class="col span_1_of_2">
-							<img src="../images/2.svg" alt="" />
+							<img src="https://d3dppz6vjvbt4r.cloudfront.net/2.svg" alt="Les utilisateurs utilisent" />
 						</div>
 						<div class="col span_1_of_2">
 							<h2>Users use</h2>
 							<p>You want to improve your website but you don't know how to change your awkward navigation bar? No problem, search for an awesome navbar in Wooble and put it in your website.</p>
 						</div>
 					</div>
-					<div class="section group">
+					<div class="section group work-three trans trans-hidden">
 						<div class="col span_1_of_2">
-							<img src="../images/3.svg" alt="" />
+							<img src="https://d3dppz6vjvbt4r.cloudfront.net/3.svg" alt="Wooble tourne" />
 						</div>
 						<div class="col span_1_of_2">
 							<h2>Wooble wobbles</h2>
@@ -150,6 +151,7 @@
 			<div class="container socials">
 				<a class="fa fa-facebook fa-2x" target="_blank" href="https://www.facebook.com/woobleio"></a>
 				<a class="fa fa-twitter fa-2x" target="_blank" href="https://www.twitter.com/woobleio"></a>
+				<a class="fa fa-youtube fa-2x" target="_blank" href="https://www.youtube.com/channel/UCHw2_FHs3o522tSwgdTIHHA"></a>
 			</div>
 			<div id="mentions">
 				<a href="../about.html" class="link" target="_blank">About</a><span>&nbsp;&middot;&nbsp;</span>
@@ -158,6 +160,101 @@
 		</footer>
 		<script src="../ui.js"></script>
 		<script src="../ajax.js"></script>
+		<script type="text/javascript">
+			let creations = [
+			  {
+			    name: 'explBtn',
+			    url: 'https://www.wooble.io/creations/4X8MByjo',
+			    params: [{
+			      key: 'color',
+			      type: 'color',
+			      value: '#9910fe'
+			    },{
+			      key: 'text',
+			      type: 'text',
+			      value: 'Click me'
+			    },{
+			      key: 'textColor',
+			      type: 'color',
+			      value: '#ffeeff'
+			    }],
+			    functions: [{
+			      key: 'setColor',
+			      name: 'Color',
+			      type: 'color',
+			      nbParams: 2
+			    },{
+			      key: 'setText',
+			      name: 'Text',
+			      type: 'text',
+			      nbParams: 1
+			    }]
+			  },
+			  {
+			    name: 'paintSpin',
+			    url: 'https://www.wooble.io/creations/4V8dAZjv',
+			    params: [{
+			      key: 'color',
+			      type: 'color',
+			      value: '#2512ee'
+			    },{
+			      key: 'size',
+			      type: 'number',
+			      value: '100'
+			    },{
+			      name: 'speed',
+			      type: 'number',
+			      value: '1'
+			    }],
+			    functions: [{
+			      name: 'Color',
+			      key: 'setColor',
+			      type: 'color',
+			      nbParams: 1
+			    },{
+			      name: 'Size',
+			      key: 'setSize',
+			      type: 'number',
+			      nbParams: 1,
+			      minRange: 50,
+			      maxRange: 300
+			    },{
+			      name: 'Speed',
+			      key: 'setSpeed',
+			      type: 'number',
+			      nbParams: 2,
+			      minRange: 0.1,
+			      maxRange: 5
+			    }]
+			  },
+			  {
+			    name: 'fillSwitch',
+			    url: 'https://www.wooble.io/creations/vlPAZ6rA',
+			    params: [{
+			      key: 'boxColorOn',
+			      type: 'color',
+			      value: '#002B4F'
+			    },{
+			      name: 'boxColorOff',
+			      type: 'color',
+			      value: '#4092D7'
+			    }],
+			    functions: [{
+			      name: 'Color OFF',
+			      key: 'setBoxColorOff',
+			      type: 'color',
+			      nbParams: 1
+			    },{
+			      name: 'Color ON',
+			      key: 'setBoxColorOn',
+			      type: 'color',
+			      nbParams: 1
+			    }]
+			  }
+			];
+		</script>
+		<script src="../lib/jscolor.min.js"></script>
+		<script src="../showoff.js"></script>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -167,7 +264,7 @@
 		  ga('create', 'UA-80538061-1', 'auto');
 		  ga('send', 'pageview');
 		</script>
-		<script src="https://d2ncq0durb0run.cloudfront.net/472b07b9fcf2c2451e8781e944bf5f77cd8457c8-8/wooble.js"></script>
+		<script src="https://d2ncq0durb0run.cloudfront.net/472b07b9fcf2c2451e8781e944bf5f77cd8457c8-12/wooble.js"></script>
 		<script>
 			var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 			var roadmap = {
