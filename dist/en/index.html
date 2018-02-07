@@ -49,13 +49,13 @@
 		<main>
 			<section id="home">
 				<div class="container ontop">
-					<img src="https://d3dppz6vjvbt4r.cloudfront.net/landing_logo_back.png" alt="Wooble ce dont ton site web a besoin" />
+					<h1><strong>Freely</strong> use web design creations and <strong>customize</strong> it for making your website fabulous.</h1>
 					<div class="creation section group">
 						<div class="col span_1_of_4 arrow prev">
 							<i class="fa fa-angle-left fa-4x"></i>
 						</div>
 						<div id="crea" class="col span_2_of_4 pop">
-							<div></div>
+							<div id="wooble"></div>
 						</div>
 						<div class="col span_1_of_4 arrow next">
 							<i class="fa fa-angle-right fa-4x"></i>
@@ -63,7 +63,7 @@
 					</div>
 					<div id="crea-params">
 					</div>
-					<a href="" target="_blank" id="crea-link">See the creation in Wooble</a>
+					<a href="" target="_blank" id="crea-link">See this creation on Wooble</a>
 				</div>
 			</section>
 			<section id="howItWorks" class="parallax">
@@ -159,7 +159,7 @@
 			</div>
 		</footer>
 		<script src="../lib/jscolor.min.js"></script>
-		<script src="../wooble.js"></script>
+		<script src="https://d2ncq0durb0run.cloudfront.net/472b07b9fcf2c2451e8781e944bf5f77cd8457c8-14/wooble.js"></script>
 		<script src="../bundle.js"></script>
 		<script type="text/javascript">
 			var creations = [
@@ -228,6 +228,49 @@
 			      maxRange: 5
 			    }]
 			  },
+				{
+					name: 'doors',
+					url: 'https://www.wooble.io/creations/97PoBbjl',
+					isFullscreen: true,
+					params: [{
+						key: 'backgroundColor',
+						type: 'color',
+						value: '#FFD2D9'
+					},{
+						key: 'doorColor',
+						type: 'color',
+						value: '#F2C360'
+					},{
+						key: 'handleColor',
+						type: 'color',
+						value: '#FFF'
+					},{
+						key: 'doorRightColor',
+						type: 'color',
+						value: '#FFD575'
+					}],
+					functions: [{
+						name: 'Wall color',
+						key: 'setBackColor',
+						type: 'color',
+						nbParams: 1
+					},{
+						name: 'Doors color',
+						key: 'setDoorColor',
+						type: 'color',
+						nbParams: 1
+					},{
+						name: 'Handles color',
+						key: 'setHandleColor',
+						type: 'color',
+						nbParams: 1
+					},{
+						name: 'Doors slide color',
+						key: 'setDoorRightColor',
+						type: 'color',
+						nbParams: 1
+					}]
+				},
 			  {
 			    name: 'fillSwitch',
 			    url: 'https://www.wooble.io/creations/vlPAZ6rA',

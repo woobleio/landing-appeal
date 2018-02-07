@@ -9466,7 +9466,20 @@ function selectCreation(creation) {
     }
   }
 
-  creaDiv.innerHTML = "<div></div>";
+  creaDiv.innerHTML = "<div id='wooble'></div>";
+
+  if (creation.isFullscreen) {
+    var _home = document.querySelector('#home');
+    _home.style.backgroundColor = 'transparent';
+
+    creaDiv.style.transform = 'none';
+
+    document.querySelector('#wooble').setAttribute('class', 'fullscreen');
+  } else {
+    home.style.backgroundColor = 'white';
+
+    creaDiv.setAttribute('style', '');
+  }
 
   Wb(creation.name).init('#crea > div', params).then(function (crea) {
     var c = crea[0];

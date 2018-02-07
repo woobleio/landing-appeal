@@ -48,7 +48,20 @@ function selectCreation(creation) {
     params[p.key] = p.value;
   }
 
-  creaDiv.innerHTML = "<div></div>";
+  creaDiv.innerHTML = "<div id='wooble'></div>";
+
+  if (creation.isFullscreen) {
+    let home = document.querySelector('#home');
+    home.style.backgroundColor = 'transparent';
+
+    creaDiv.style.transform = 'none';
+
+    document.querySelector('#wooble').setAttribute('class', 'fullscreen');
+  } else {
+    home.style.backgroundColor = 'white';
+
+    creaDiv.setAttribute('style', '');
+  }
 
   Wb(creation.name).init('#crea > div', params).then((crea) => {
     let c = crea[0];

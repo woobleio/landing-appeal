@@ -49,13 +49,13 @@
 		<main>
 			<section id="home">
 				<div class="container ontop">
-					<img src="https://d3dppz6vjvbt4r.cloudfront.net/landing_logo_back.png" alt="Wooble ce dont ton site web a besoin" />
+					<h1>Utilise <strong>librement</strong> des créations webdesign uniques et <strong>personnalisables</strong> pour ton site merveilleux.</h1>
 					<div class="creation section group">
 						<div class="col span_1_of_4 arrow prev">
 							<i class="fa fa-angle-left fa-4x"></i>
 						</div>
 						<div id="crea" class="col span_2_of_4 pop">
-							<div></div>
+							<div id="wooble"></div>
 						</div>
 						<div class="col span_1_of_4 arrow next">
 							<i class="fa fa-angle-right fa-4x"></i>
@@ -157,7 +157,7 @@
 			</div>
 		</footer>
 		<script src="lib/jscolor.min.js"></script>
-		<script src="wooble.js"></script>
+		<script src="https://d2ncq0durb0run.cloudfront.net/472b07b9fcf2c2451e8781e944bf5f77cd8457c8-14/wooble.js"></script>
 		<script src="bundle.js"></script>
 		<script type="text/javascript">
 			var creations = [
@@ -226,6 +226,49 @@
 			      maxRange: 5
 			    }]
 			  },
+				{
+					name: 'doors',
+					url: 'https://www.wooble.io/creations/97PoBbjl',
+					isFullscreen: true,
+					params: [{
+						key: 'backgroundColor',
+						type: 'color',
+						value: '#FFD2D9'
+					},{
+						key: 'doorColor',
+						type: 'color',
+						value: '#F2C360'
+					},{
+						key: 'handleColor',
+						type: 'color',
+						value: '#FFF'
+					},{
+						key: 'doorRightColor',
+						type: 'color',
+						value: '#FFD575'
+					}],
+					functions: [{
+						name: 'Couleur du mur',
+						key: 'setBackColor',
+						type: 'color',
+						nbParams: 1
+					},{
+						name: 'Couleur des portes',
+						key: 'setDoorColor',
+						type: 'color',
+						nbParams: 1
+					},{
+						name: 'Couleur des poignets',
+						key: 'setHandleColor',
+						type: 'color',
+						nbParams: 1
+					},{
+						name: 'Couleur du bord des portes',
+						key: 'setDoorRightColor',
+						type: 'color',
+						nbParams: 1
+					}]
+				},
 			  {
 			    name: 'fillSwitch',
 			    url: 'https://www.wooble.io/creations/vlPAZ6rA',
